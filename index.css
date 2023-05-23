@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=The+Nautigal&display=swap');
+body {
+    background-image: linear-gradient(130deg, #F9F5F6, #F8E8EE, #FDCEDF, #F2BED1 , rgb(198, 107, 154) );
+    background-size: 150% 150%;
+    padding: 0;
+    margin: 0;
+    border: 8px solid black;
+    height: 100vh;
+    box-sizing: border-box;
+    animation: fondo 10s infinite;
+    transition: transform 1s;
+}
+
+@keyframes fondo {
+    0%{
+        background-position: 0% 90%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 90% ;
+    }
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.love {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(171, 0, 0);
+    position: relative;
+    transform: rotate(45deg) scale(6);
+    position: absolute;
+    border-radius: 1px;
+    animation: love 3s normal infinite;
+}
+
+@keyframes love {
+    0% {
+        transform: rotate(45deg) scale(5);
+    }
+    50% {
+        transform: rotate(45deg) scale(6);
+    }
+    100% {
+        transform: rotate(45deg) scale(5);
+    }
+}
+
+.love:before,
+.love:after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color:  rgb(171, 0, 0);
+    position: absolute;
+    border-radius: 50%;
+}
+
+.love:before {
+    content: "";
+    top: 0;
+    left: -25px;
+}
+
+.love:after {
+    top: -25px;
+}
+
+.te-amo {
+    letter-spacing: 5px;
+    text-align: center;
+    z-index: 100;
+    font-size: 100px;
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+    margin-right: 10px;
+    margin-top: -60px;
+    align-items: start;
+    font-family: 'The Nautigal', cursive;
+    color: rgb(255, 255, 255);
+    animation: letra 3s ease infinite;
+}
+
+@keyframes letra {
+    0% {
+        font-size: 100px;
+        text-shadow: 0 0 9px black, 0 0 9px black, 0 0 9px black;
+    }
+    50% {
+        font-size: 120px;
+        text-shadow: 0 0 15px black, 0 0 15px black, 0 0 9px black;
+    }
+    100% {
+        font-size: 100px;
+        text-shadow: 0 0 9px black, 0 0 9px black, 0 0 9px black;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .container {
+        display: flex;
+        height: 80vh;
+        justify-content: center;
+        align-items: center;
+    }
+    .love {
+        transform: rotate(45deg) scale(3);
+        animation: love1 3s ease infinite;
+    }
+    @keyframes love1 {
+        0% {
+            transform: rotate(45deg) scale(3);
+        }
+        50% {
+            transform: rotate(45deg) scale(3.8);
+        }
+        100% {
+            transform: rotate(45deg) scale(3);
+        }
+    }
+    .te-amo {
+        font-size: 60px;
+        animation: letra1 3s ease infinite;
+    }
+    @keyframes letra1 {
+        0% {
+            font-size: 60px;
+            text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black;
+        }
+        50% {
+            font-size: 80px;
+            text-shadow: 0 0 9px black, 0 0 9px black, 0 0 4px black;
+        }
+        100% {
+            font-size: 60px;
+            text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black;
+        }
+    }
+}
+
+
+i {
+    display: flex;
+    flex-direction: column-reverse;
+    position: absolute;
+    background: rgb(255, 255, 255);
+    border-radius: 50% 0 50%;
+    box-shadow: 0px 0px 19px 0px rgb(186, 6, 192);
+    box-shadow: inset 0 -1px 1px rgb(198, 22, 204);
+    top: -17px;
+    animation: nieve linear infinite;
+}
+
+
+@keyframes nieve {
+    0% {
+        top: -17px;
+    }
+    100% {
+        top: calc(100vh + 50px);
+    }
+}
